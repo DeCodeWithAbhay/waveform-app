@@ -1,0 +1,39 @@
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Increase the second column width */
+    grid-template-rows: 1fr 2fr 1fr; /* Top row (Canvas) is larger, bottom row (Output) adjusts to content */
+    grid-template-areas:
+      "top-left top-right";
+    height: 100vh;
+  }
+
+
+  .left-section {
+    grid-area: top-left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .left-section app-controls{
+   padding: 10px;
+  }
+
+  .left-section app-output{
+    padding: 10px;
+   }
+  
+  .top-right-section {
+    grid-area: top-right;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+
